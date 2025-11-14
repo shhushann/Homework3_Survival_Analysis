@@ -26,7 +26,6 @@ Comprehensive survival analysis on telecom churn data using parametric (AFT), no
 ### 1. Create Virtual Environment
 
 ```bash
-cd "/Users/user/Desktop/Marketing Analytics/Homework3_Survival_Analysis"
 python3 -m venv .venv
 ```
 
