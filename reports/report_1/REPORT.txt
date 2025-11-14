@@ -1,0 +1,86 @@
+
+SURVIVAL ANALYSIS REPORT #1
+Generated: 2025-11-14 12:38:33
+
+================================================================================
+EXECUTIVE SUMMARY
+================================================================================
+
+Dataset: telco.csv
+Total Observations: 1000
+Processed Observations: 1000
+Total Features: 19
+Churn Cases: 274
+Censored Cases: 726
+
+================================================================================
+MODELS FITTED
+================================================================================
+
+PARAMETRIC MODELS (AFT):
+WeibullAFT, LogNormalAFT, LogLogisticAFT
+
+PARAMETRIC MODELS (Non-AFT):
+Weibull, LogNormal, LogLogistic, Exponential
+
+NON-PARAMETRIC MODELS:
+- Kaplan-Meier Estimator
+- Nelson-Aalen Estimator
+- Breslow-Fleming-Harrington Estimator
+
+================================================================================
+MODEL PERFORMANCE COMPARISON
+================================================================================
+
+         Model       Type  Log-Likelihood         AIC         BIC
+  LogNormalAFT        AFT    -1454.150107 2950.300213 2922.115724
+LogLogisticAFT        AFT    -1455.129130 2952.258260 2924.073770
+    WeibullAFT        AFT    -1458.178563 2958.357127 2930.172638
+     LogNormal Parametric    -1602.517574 3209.035147 3218.850658
+   LogLogistic Parametric    -1605.207738 3214.415476 3224.230986
+   Exponential Parametric    -1606.980407 3215.960813 3220.868569
+       Weibull Parametric    -1606.430585 3216.861171 3226.676681
+
+Best Model by AIC: LogNormalAFT
+Best Model by BIC: LogNormalAFT
+
+================================================================================
+KEY FINDINGS
+================================================================================
+
+1. AFT Models:
+   - Weibull AFT AIC: 2958.3571
+   - LogNormal AFT AIC: 2950.3002
+   - LogLogistic AFT AIC: 2952.2583
+
+2. Parametric Models:
+   - Weibull AIC: 3216.8612
+   - LogNormal AIC: 3209.0351
+   - LogLogistic AIC: 3214.4155
+   - Exponential AIC: 3215.9608
+
+3. Median Survival Times:
+   - Overall: inf months
+
+================================================================================
+PLOTS GENERATED
+================================================================================
+
+1. AFT Models Survival Curves
+2. Parametric Models Survival Curves
+3. Non-Parametric Estimators
+4. All Models Comparison
+5. Model Comparison Metrics (AIC/BIC)
+6. Diagnostics for Each AFT Model
+7. Feature Coefficients
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+- Compare models using AIC/BIC for model selection
+- Use diagnostics plots to assess model fit
+- Interpret feature coefficients for business insights
+- Validate predictions on holdout test set
+
+================================================================================
